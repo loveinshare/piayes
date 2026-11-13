@@ -1,0 +1,29 @@
+[Unit]
+Description=Bluetooth RFCOMM GPIO control daemon
+After=bluetooth.target
+Requires=bluetooth.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/bt-gpio/bt_gpio_daemon.py
+WorkingDirectory=/opt/bt-gpio
+Restart=on-failure
+RestartSec=2
+# 蓝牙/RPi.GPIO 只需要 NET_ADMIN 等 capability ——
+# 用 capability 代替全 root (spec P1-11), 不再是为了 "省事保持 root"
+User=pi
+Group=pi
+SupplementaryGroups=bluetooth gpio
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+[Install]
+WantedBy=multi-user.target

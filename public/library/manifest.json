@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "chopin",
+      "name": "Chopin",
+      "items": [
+        {
+          "id": "nocturne-eb-major-aigei",
+          "title": "Nocturne in E♭ Major",
+          "subtitle": "降E大调夜曲 (双 track MIDI — RH/LH 通道清晰)",
+          "composer": "Chopin",
+          "key": "E♭ major",
+          "duration": 219,
+          "difficulty": 3,
+          "tags": [
+            "famous",
+            "verified"
+          ],
+          "file": "chopin/nocturne-eb-major-aigei.mid",
+          "tracks": 2
+        },
+        {
+          "id": "fantaisie-impromptu",
+          "title": "Fantaisie-Impromptu in C# minor",
+          "subtitle": "幻想即兴曲 Op.66 (双 track MIDI — 通道清晰)",
+          "composer": "Chopin",
+          "key": "C# minor",
+          "duration": 269,
+          "difficulty": 4,
+          "tags": [
+            "famous",
+            "virtuoso"
+          ],
+          "file": "chopin/fantaisie-impromptu.mid",
+          "tracks": 2
+        },
+        {
+          "id": "godowsky-waltz-csharp-minor",
+          "title": "Waltz in C# minor (Godowsky arr.)",
+          "subtitle": "Godowsky 'impossible' version of Op.64 No.2 — 双 track MIDI, 通道清晰",
+          "composer": "Godowsky (after Chopin)",
+          "key": "C# minor",
+          "duration": 186,
+          "difficulty": 5,
+          "tags": [
+            "virtuoso",
+            "piano-roll"
+          ],
+          "file": "chopin/godowsky-waltz-csharp-minor.mid",
+          "tracks": 2
+        },
+        {
+          "id": "polonaise-op40-no1",
+          "title": "Polonaise Op.40 No.1 \"Military\"",
+          "subtitle": "军队波兰舞曲 Op.40 No.1 (双 track MIDI · 本文件是 A major 移调版, 比原谱高半音)",
+          "composer": "Chopin",
+          "key": "A major",
+          "difficulty": 4,
+          "tags": [
+            "famous",
+            "polonaise"
+          ],
+          "file": "chopin/polonaise-op40-no1.mid",
+          "tracks": 2,
+          "duration": 274
+        },
+        {
+          "id": "revolutionary-etude",
+          "title": "Étude Op.10 No.12 \"Revolutionary\"",
+          "subtitle": "革命练习曲 Op.10 No.12 (双 track MIDI)",
+          "composer": "Chopin",
+          "key": "C minor",
+          "difficulty": 4,
+          "tags": [
+            "famous",
+            "virtuoso"
+          ],
+          "file": "chopin/revolutionary-etude.mid",
+          "tracks": 2,
+          "duration": 128
+        },
+        {
+          "id": "waltz-op64-no2",
+          "title": "Waltz in C# minor, Op.64 No.2",
+          "subtitle": "原版 Chopin (非 Godowsky 改编) — 单 track MIDI",
+          "composer": "Chopin",
+          "key": "C# minor",
+          "difficulty": 3,
+          "tags": [
+            "famous",
+            "waltz"
+          ],
+          "file": "chopin/waltz-op64-no2.mid",
+          "tracks": 1,
+          "duration": 182
+        }
+      ]
+    },
+    {
+      "id": "bach",
+      "name": "Bach",
+      "items": [
+        {
+          "id": "bwv1041-allegro-moderato",
+          "title": "Violin Concerto No.1 in A minor — 1st mvt (Allegro moderato)",
+          "subtitle": "BWV 1041 独奏小提琴 + 弦乐群伴奏 (双 track MIDI: 独奏小提琴标 RH, 伴奏合 LH)",
+          "composer": "J.S. Bach",
+          "key": "A minor",
+          "duration": 222,
+          "difficulty": 3,
+          "tags": [
+            "baroque",
+            "concerto",
+            "verified"
+          ],
+          "file": "bach/bwv1041-allegro-moderato.mid",
+          "tracks": 2
+        },
+        {
+          "id": "bwv1041-piano-v2-chords",
+          "title": "Violin Concerto No.1 in A minor — 1st mvt (Allegro moderato) · 钢琴独奏版 · 和弦伴奏",
+          "subtitle": "BWV 1041 右手=原独奏小提琴(逐字节不动), 左手=大提琴走路低音 + 从原谱和声推出的三和弦 (双 track MIDI)",
+          "composer": "J.S. Bach",
+          "key": "A minor",
+          "duration": 222,
+          "difficulty": 3,
+          "tags": [
+            "baroque",
+            "concerto",
+            "piano-solo",
+            "simplified"
+          ],
+          "file": "bach/bwv1041-piano-v2-chords.mid",
+          "tracks": 2
+        },
+        {
+          "id": "bwv1041-piano-v2-ensemble",
+          "title": "Violin Concerto No.1 in A minor — 1st mvt (Allegro moderato) · 钢琴独奏版 · 原声部伴奏",
+          "subtitle": "BWV 1041 右手=原独奏小提琴(逐字节不动), 左手=原谱大提琴 + 中提琴, 只做八度折叠不改音 (双 track MIDI)",
+          "composer": "J.S. Bach",
+          "key": "A minor",
+          "duration": 222,
+          "difficulty": 2,
+          "tags": [
+            "baroque",
+            "concerto",
+            "piano-solo",
+            "simplified"
+          ],
+          "file": "bach/bwv1041-piano-v2-ensemble.mid",
+          "tracks": 2
+        },
+        {
+          "id": "bwv1041-piano-v2-bass",
+          "title": "Violin Concerto No.1 in A minor — 1st mvt (Allegro moderato) · 钢琴独奏版 · 大提琴低音",
+          "subtitle": "BWV 1041 右手=原独奏小提琴(逐字节不动), 左手=只有原谱大提琴低音线, 最简 (双 track MIDI)",
+          "composer": "J.S. Bach",
+          "key": "A minor",
+          "duration": 222,
+          "difficulty": 1,
+          "tags": [
+            "baroque",
+            "concerto",
+            "piano-solo",
+            "simplified",
+            "beginner-friendly"
+          ],
+          "file": "bach/bwv1041-piano-v2-bass.mid",
+          "tracks": 2
+        },
+        {
+          "id": "prelude-bwv846",
+          "title": "Prelude No.1 in C major",
+          "subtitle": "BWV 846 平均律第一册 C 大调前奏曲 (双 track MIDI)",
+          "composer": "J.S. Bach",
+          "key": "C major",
+          "duration": 148,
+          "difficulty": 2,
+          "tags": [
+            "baroque",
+            "beginner-friendly",
+            "famous"
+          ],
+          "file": "bach/prelude-bwv846.mid",
+          "tracks": 2
+        }
+      ]
+    },
+    {
+      "id": "pachelbel",
+      "name": "Pachelbel",
+      "items": [
+        {
+          "id": "canon-in-d",
+          "title": "Canon in D",
+          "subtitle": "D 大调卡农 (单 track — 声部聚类推断)",
+          "composer": "Pachelbel",
+          "key": "D major",
+          "duration": 302,
+          "difficulty": 2,
+          "tags": [
+            "famous",
+            "beginner-friendly"
+          ],
+          "file": "pachelbel/canon-in-d.mid",
+          "tracks": 1
+        }
+      ]
+    },
+    {
+      "id": "mozart",
+      "name": "Mozart",
+      "items": [
+        {
+          "id": "turkish-march",
+          "title": "Piano Sonata No.11 K.331 — 3rd mvt \"Alla Turca\"",
+          "subtitle": "土耳其进行曲 K.331 第三乐章 (双 track MIDI · 2/4 拍 · 本文件是 G minor 移调版, 比原谱低全音)",
+          "composer": "Mozart",
+          "key": "G minor",
+          "difficulty": 3,
+          "tags": [
+            "famous",
+            "classical"
+          ],
+          "file": "mozart/turkish-march.mid",
+          "tracks": 2,
+          "duration": 32
+        },
+        {
+          "id": "requiem-piano",
+          "title": "Requiem in D minor K.626 (piano reduction)",
+          "subtitle": "莫扎特安魂曲 钢琴独奏版 (3 track MIDI: 人声 / 钢琴上声部 / 贝斯)",
+          "composer": "Mozart",
+          "key": "D minor",
+          "difficulty": 4,
+          "tags": [
+            "classical",
+            "requiem"
+          ],
+          "file": "mozart/requiem-piano.mid",
+          "tracks": "multi",
+          "duration": 171
+        }
+      ]
+    },
+    {
+      "id": "liszt",
+      "name": "Liszt",
+      "items": [
+        {
+          "id": "liebestraum",
+          "title": "Liebestraum No.3 in A♭ major S.541",
+          "subtitle": "爱之梦 S.541 No.3 (双 track MIDI · 6/4 拍)",
+          "composer": "Liszt",
+          "key": "A♭ major",
+          "difficulty": 4,
+          "tags": [
+            "famous",
+            "romantic"
+          ],
+          "file": "liszt/liebestraum.mid",
+          "tracks": 2,
+          "duration": 256
+        }
+      ]
+    },
+    {
+      "id": "pop",
+      "name": "流行 / 其他",
+      "items": [
+        {
+          "id": "flower-dance",
+          "title": "Flower Dance",
+          "subtitle": "花之舞 (双 track MIDI · C# 小调)",
+          "composer": "Ryo Nagamatsu",
+          "key": "C# minor",
+          "duration": 265,
+          "difficulty": 2,
+          "tags": [
+            "pop",
+            "famous"
+          ],
+          "file": "pop/flower-dance.mid",
+          "tracks": 2
+        },
+        {
+          "id": "mariage-d-amour",
+          "title": "Mariage d'amour",
+          "subtitle": "梦中的婚礼 · Paul de Senneville / Olivier Toussaint (双 track MIDI · 原曲变拍 4/4→3/4→7/8→6/8→12/8→9/8, 44 小节)",
+          "composer": "Paul de Senneville, Olivier Toussaint",
+          "key": "G minor",
+          "duration": 181,
+          "difficulty": 2,
+          "tags": [
+            "famous",
+            "wedding"
+          ],
+          "file": "pop/mariage-d-amour.mid",
+          "tracks": 2
+        },
+        {
+          "id": "track-in-time",
+          "title": "Track in Time",
+          "subtitle": "Track in Time (双 track MIDI · D 小调)",
+          "composer": "Ruel",
+          "key": "D minor",
+          "duration": 265,
+          "difficulty": 2,
+          "tags": [
+            "pop"
+          ],
+          "file": "pop/track-in-time.mid",
+          "tracks": 2
+        },
+        {
+          "id": "always-with-me",
+          "title": "Always With Me (いつも何度でも)",
+          "subtitle": "千与千寻主题曲 久石让 (双 track MIDI · 本文件是 F major 移调版, 比原谱低全音)",
+          "composer": "Joe Hisaishi",
+          "key": "F major",
+          "difficulty": 3,
+          "tags": [
+            "anime",
+            "famous",
+            "ghibli"
+          ],
+          "file": "pop/always-with-me.mid",
+          "tracks": 2,
+          "duration": 150
+        },
+        {
+          "id": "comptine-d-un-autre-ete",
+          "title": "Comptine d'un autre été",
+          "subtitle": "天使爱美丽主题曲 Yann Tiersen (双 track MIDI · G 大调)",
+          "composer": "Yann Tiersen",
+          "key": "G major",
+          "difficulty": 3,
+          "tags": [
+            "famous",
+            "film"
+          ],
+          "file": "pop/comptine-d-un-autre-ete.mid",
+          "tracks": 2,
+          "duration": 133
+        },
+        {
+          "id": "river-flows-in-you",
+          "title": "River Flows In You",
+          "subtitle": "李闰珉 (单 track MIDI · F# 小调)",
+          "composer": "Yiruma",
+          "key": "F# minor",
+          "difficulty": 2,
+          "tags": [
+            "pop",
+            "beginner-friendly"
+          ],
+          "file": "pop/river-flows-in-you.mid",
+          "tracks": 1,
+          "duration": 165
+        },
+        {
+          "id": "autumn-whispers",
+          "title": "秋日的私语 (Autumn Whispers)",
+          "subtitle": "理查德·克莱德曼 (双 track MIDI)",
+          "composer": "Richard Clayderman",
+          "key": "A♭ major",
+          "difficulty": 2,
+          "tags": [
+            "pop",
+            "famous"
+          ],
+          "file": "pop/autumn-whispers.mid",
+          "tracks": 2,
+          "duration": 189
+        },
+        {
+          "id": "kiss-the-rain",
+          "title": "Kiss the Rain (비의印记)",
+          "subtitle": "雨的印记 李闰珉 (双 track MIDI · A♭ 大调)",
+          "composer": "Yiruma",
+          "key": "A♭ major",
+          "difficulty": 2,
+          "tags": [
+            "pop",
+            "beginner-friendly"
+          ],
+          "file": "pop/kiss-the-rain.mid",
+          "tracks": 2,
+          "duration": 264
+        }
+      ]
+    }
+  ]
+}

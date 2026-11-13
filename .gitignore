@@ -1,0 +1,73 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+*.tsbuildinfo
+
+# env / IDE
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# vite cache
+.vite/
+
+# runtime / user data
+recordings/
+page_activity.log
+chat_persist.*
+chat_list_*.json
+apply_log_*.txt
+apply_stats_*.json
+stopped*.txt
+chrome_profile/
+
+# library 资源 (大文件, 走 CDN / 外部下载, 不入仓)
+public/library/_archive/
+# 用户临时下载的乐谱 (根目录散落的中文文件名 MIDI/MXL)
+*.mid
+*.mxl
+!tests/fixtures/**/*.mid
+!tests/fixtures/**/*.mxl
+# 公共乐库整个目录都入库 —— manifest.json 里引用的曲子必须跟着仓库走,
+# 管理员存到公共乐库的新曲子也要能被 git 带走.
+!public/library/**/*.mid
+!public/library/**/*.mxl
+
+# 数据库快照 (npm run db:backup 生成) —— 活库在 DATA_DIR (仓库外).
+# 快照里有密码哈希, **不入库** (公开仓库尤其不能进).
+server-data/
+server-data/*.db-wal
+server-data/*.db-shm
+
+# debug 临时脚本 (根目录 _*.{mjs,cjs,py,html} + tests/_*.test.ts)
+/_*.mjs
+/_*.cjs
+/_*.py
+/_*.html
+/_chrome_tmp/
+/tests/_*.test.ts
+/tests/repro_*.test.ts
+/tests/tmp_*.test.ts
+
+# UI 审核截图 (docs/ui-review-2026-11-01.md 的证据, 体积大不入库)
+/_shots/
+
+# 本地临时下载的乐谱素材 (tests/diag_all_downloads.test.ts 用, 干净克隆/CI 上不存在)
+/downloads/
+
+# Python 缓存 (后端脚本跑起来会生成, 不该进仓)
+__pycache__/
+*.pyc

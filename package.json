@@ -1,0 +1,45 @@
+{
+  "name": "piayes",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Piayes · 派亚 —— 浏览器里的钢琴跟弹练习（乐谱下落、实时判定、LED 灯带指引）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node scripts/dev-server.mjs",
+    "dev:all": "node scripts/dev.mjs",
+    "serve": "node scripts/serve-dist.mjs",
+    "db:backup": "node scripts/db-backup.mjs",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --force",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@tonejs/midi": "^2.0.28",
+    "fflate": "^0.8.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tone": "^15.1.22",
+    "vexflow": "^5.0.0",
+    "ws": "^8.22.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/webmidi": "^2.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^25.0.1",
+    "linkedom": "^0.18.5",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5"
+  }
+}

@@ -1,0 +1,32 @@
+[Unit]
+Description=WebSocket-to-TCP bridge for LED strip control (browser -> led_remote)
+After=network-online.target
+Wants=network-online.target
+# 不强依赖 bt-gpio, 因为 LED TCP server 由 led_control.py / led_visual_test.py
+# 按需启动; 桥只负责转发, 找不到对端就 502
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/bt-gpio/ws_led_bridge.py
+WorkingDirectory=/opt/bt-gpio
+Restart=on-failure
+RestartSec=2
+# 桥只是转发, 不需要 root (spec P1-11) —— 旧版本的注释自己也写明了这点
+User=pi
+Group=pi
+# 沙箱加固: 桥除了读自己的 token 文件什么都不应该碰
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+# 只需要读 token 文件 (位于 /opt/bt-gpio) —— ProtectSystem=strict 下系统已经是只读
+Environment=LED_TOKEN_FILE=/opt/bt-gpio/led_token
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+[Install]
+WantedBy=multi-user.target
