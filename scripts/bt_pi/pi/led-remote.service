@@ -1,0 +1,31 @@
+[Unit]
+Description=LED strip TCP server for piano-follow (browser -> ws_led_bridge -> led_remote)
+Documentation=https://github.com/loveinshare/piano-follow
+# 跟 ws-led-bridge 平行启动; 桥连不上 7777 也无所谓, led_remote 启起来后桥自然转发成功
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+# rpi_ws281x 拿 /dev/mem, 必须 root; -u 无缓冲让 journalctl 立刻看到日志
+# --physical-count 352: 物理链上实际有多少颗 (两条灯带串联). **帧长永远按它发**,
+#   跟客户端 init 的 count 无关 —— 发得比物理链短的话, 后一条带会整条刷白.
+ExecStart=/usr/bin/python3 -u /opt/bt-gpio/led_remote.py --auto-init --physical-count 352
+WorkingDirectory=/opt/bt-gpio
+# 僵死后自动重启 (rpi_ws281x 偶发死锁)
+Restart=on-failure
+RestartSec=5
+# 资源限制放宽一点 (rpi_ws281x 用 DMA, 内存映射大)
+LimitRTPRIO=99
+LimitMEMLOCK=infinity
+# 仍需 root (/dev/mem), 但收窄权限 (spec P1-11) —— 被打得了也拿不到整机
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

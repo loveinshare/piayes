@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # 类型检查用 --force: tsc -b 有增量缓存, 容易出现"改了没重新检查"的错觉
+      - run: npm run typecheck
+      # 先 build 再 test —— 有一条静态资源用例要读 dist/index.html
+      - run: npm run build
+      - run: npm test

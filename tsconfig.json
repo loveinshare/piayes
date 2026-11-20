@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client", "webmidi", "vitest/globals"]
+  },
+  "include": ["src", "tests"],
+  // 临时调试/复现测试 (.gitignore 已排除, 但 include:["tests"] 仍会拾取它们).
+  // 这些文件里常有实验性的类型, 会让 `tsc -b` 挂掉从而阻塞 build.
+  "exclude": ["tests/_*.test.ts", "tests/repro_*.test.ts", "tests/tmp_*.test.ts"]
+}

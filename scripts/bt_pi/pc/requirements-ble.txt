@@ -1,0 +1,8 @@
+# ESP32-S3 BLE LED 外设的 PC 端依赖
+#
+#   pip install -r requirements-ble.txt
+#
+# bleak        —— BLE 客户端 (Windows 原生支持, 不需要装驱动)
+# websockets   —— WebSocket ↔ BLE 桥 (给前端用)
+bleak>=0.22
+websockets>=12.0
